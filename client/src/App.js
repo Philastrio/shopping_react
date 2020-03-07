@@ -1,12 +1,13 @@
 import React from "react";
-import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import AppNavbar from "./components/AppNavbar";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <h1>hi</h1>
+    <div>
+      <AppNavbar />
     </div>
   );
-}
+};
 
 export default App;
