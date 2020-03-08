@@ -2,9 +2,9 @@ import express from "express";
 import mongoose from "mongoose";
 import path from "path";
 import cors from "cors";
-import bodyParser from "body-parser";
 import morgan from "morgan";
 import config from "./config";
+import jwt from "jsonwebtoken";
 
 // routes
 import itemsRoutes from "./routes/api/items";
@@ -22,7 +22,7 @@ app.use(cors());
 app.use(morgan("dev"));
 
 // BodyParser middleware
-app.use(bodyParser.json());
+app.use(express.json());
 
 //DB config
 const db = `${MONGO_URI}/${MONGO_DB_NAME}`;
