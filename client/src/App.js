@@ -6,21 +6,27 @@ import { Provider } from "react-redux";
 import store from "./store";
 import ItemModal from "./components/itemModal";
 import { Container } from "reactstrap";
+import { loadUser } from "./actions/authActions";
 
 import "./App.css";
 
-const App = () => {
-  return (
-    <Provider store={store}>
-      <div>
-        <AppNavbar />
-        <Container>
-          <ItemModal />
-          <ShoppingList />
-        </Container>
-      </div>
-    </Provider>
-  );
-};
+class App extends Component {
+  componentDidMount() {
+    store.dispatch(loadUser());
+  }
+  render() {
+    return (
+      <Provider store={store}>
+        <div>
+          <AppNavbar />
+          <Container>
+            <ItemModal />
+            <ShoppingList />
+          </Container>
+        </div>
+      </Provider>
+    );
+  }
+}
 
 export default App;
