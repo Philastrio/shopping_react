@@ -16,7 +16,7 @@ const { MONGO_URI, MONGO_DB_NAME } = config;
 const app = express();
 
 // Cors middlewares
-app.use(cors());
+app.use(cors({ origin: true, credentials: true }));
 
 // Cors middlewares
 app.use(morgan("dev"));
