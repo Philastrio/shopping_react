@@ -49,7 +49,7 @@ const AppNavbar = () => {
     <div>
       <Navbar color="dark" dark expand="sm" className="mb-5">
         <Container>
-          <NavbarBrand href="/">ShoppingList</NavbarBrand>
+          <NavbarBrand href="/"> Side Project's Blog(사플 블로그) </NavbarBrand>
           <NavbarToggler onClick={handleToggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="ml-auto" navbar>
