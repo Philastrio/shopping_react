@@ -9,6 +9,9 @@ import { Container } from "reactstrap";
 import { loadUser } from "./redux/actions/authActions";
 
 import "./App.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import PostModal from "./components/PostModal";
 
 const App = () => {
   useEffect(() => {
@@ -19,10 +22,13 @@ const App = () => {
     <Provider store={store}>
       <div>
         <AppNavbar />
+        <Header />
         <Container>
           <ItemModal />
+          <PostModal />
           <ShoppingList />
         </Container>
+        <Footer />
       </div>
     </Provider>
   );

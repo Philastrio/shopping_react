@@ -13,7 +13,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { addItems } from "../redux/actions/itemsActions";
 import { v1 as uuidv1 } from "uuid";
 
-const ItemModal = () => {
+const PostModal = () => {
   const { isAuthenticated } = useSelector(state => state.auth);
   const [modal, setModal] = useState(false);
   const [name, setName] = useState("");
@@ -70,4 +70,4 @@ const ItemModal = () => {
   );
 };
 
-export default ItemModal;
+export default PostModal;

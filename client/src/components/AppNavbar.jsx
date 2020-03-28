@@ -47,7 +47,7 @@ const AppNavbar = () => {
 
   return (
     <div>
-      <Navbar color="dark" dark expand="sm" className="mb-5">
+      <Navbar color="dark" dark expand="sm">
         <Container>
           <NavbarBrand href="/"> Side Project's Blog(사플 블로그) </NavbarBrand>
           <NavbarToggler onClick={handleToggle} />
